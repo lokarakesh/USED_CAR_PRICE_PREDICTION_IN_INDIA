@@ -82,8 +82,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 # Streamlit App
-st.markdown('<div class="header">🚗 Used Car Price Prediction</div>', unsafe_allow_html=True)
-st.title("🚗 Predict the Price, Drive the Decision. 🏎️")
+st.markdown('<div class="header">🚗 Predict the Price, Drive the Decision. 🏎️</div>', unsafe_allow_html=True)
+#st.title("🚗 Predict the Price, Drive the Decision. 🏎️")
 st.write("Fill in the details below to get the estimated price of the used 🚗.")
 
 # Input fields for car details
