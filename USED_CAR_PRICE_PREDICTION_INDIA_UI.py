@@ -1,4 +1,3 @@
-# Install Streamlit if not already installed using `pip install streamlit`
 
 import streamlit as st
 import pandas as pd
@@ -36,7 +35,7 @@ def train_model(X, y):
     return model_pipeline
 
 # Load the dataset
-file_path = "Car_Data_Zscore.csv"  # Update this path if needed
+file_path = "Car_Data_Zscore.csv"  
 data = load_data(file_path)
 
 # Features and Target
@@ -76,7 +75,7 @@ st.markdown(
 )
 
 # Streamlit App
-st.title("🚗 Drive Smart: Predict Your Car’s Price Instantly 🏎️")
+st.title("🚗 Predict the Price, Drive the Decision. 🏎️")
 st.write("Fill in the details below to get the estimated price of the used 🚗.")
 
 # Input fields for car details
@@ -118,3 +117,20 @@ if st.button("Predict Price"):
 # Footer
 st.markdown("---")
 st.write("Made with ❤️ by Rakesh Loka")
+st.markdown("""
+    <div style="background-color: #f9f9f9; border-left: 6px solid #007bff; padding: 10px; margin: 20px 0;">
+        <h3 style="color: #007bff;">💡 Note to Users:</h3>
+        <p style="color: #333; font-size: 16px;">
+            This tool is designed to provide an estimated price for your used car based on the details you enter. 
+            Please ensure that the inputs are as accurate as possible to get the best prediction. 
+        </p>
+        <ul style="color: #555; font-size: 14px;">
+            <li>Use the dropdowns to select the car make, model, and other details.</li>
+            <li>Fields like engine size and power will be auto-filled when possible based on the model.</li>
+            <li>Prices are indicative and may vary based on additional factors not included in the dataset.</li>
+        </ul>
+        <p style="color: #333; font-size: 16px;">
+            Your feedback is valuable to us. Feel free to share your thoughts to help us improve!
+        </p>
+    </div>
+""", unsafe_allow_html=True)
