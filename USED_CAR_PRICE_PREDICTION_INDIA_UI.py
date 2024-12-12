@@ -134,7 +134,6 @@ st.markdown("""
         </p>
         <ul style="color: #555; font-size: 14px;">
             <li>Use the dropdowns to select the car make, model, and other details.</li>
-            <li>Fields like engine size and power will be auto-filled when possible based on the model.</li>
             <li>Prices are indicative and may vary based on additional factors not included in the dataset.</li>
         </ul>
         <p style="color: #333; font-size: 16px;">
