@@ -76,7 +76,7 @@ st.markdown(
 )
 
 # Streamlit App
-st.title("Car Price Prediction 🚗 🚗")
+st.title("🚗 Drive Smart: Predict Your Car’s Price Instantly 🏎️")
 st.write("Fill in the details below to get the estimated price of the used 🚗.")
 
 # Input fields for car details
