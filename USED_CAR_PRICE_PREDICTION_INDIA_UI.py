@@ -46,8 +46,40 @@ y = data["Price(Lakhs)"]
 # Train the model and cache it
 model = train_model(X, y)
 
+# Streamlit page configuration
+st.set_page_config(page_title="Car Price Prediction", layout="wide")
+
+# Custom CSS for a modern UI
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background: #f7f7f9;
+        }
+        h1, h2, h3 {
+            font-family: 'Arial', sans-serif;
+        }
+        .section-title {
+            color: #007bff;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .predict-button button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Streamlit App
-st.title("Used Car Price Prediction")
+st.title("Car Price Prediction 🚗 🚗")
+st.write("Fill in the details below to get the estimated price of the used 🚗.")
 
 # Input fields for car details
 make = st.selectbox("Make", options=data["Make"].unique())
@@ -85,3 +117,6 @@ if st.button("Predict Price"):
     })
     prediction = model.predict(input_data)
     st.success(f"Predicted Price: ₹{prediction[0]:,.2f} Lakhs")
+# Footer
+st.markdown("---")
+st.write("Made with ❤️ by Rakesh Loka")
