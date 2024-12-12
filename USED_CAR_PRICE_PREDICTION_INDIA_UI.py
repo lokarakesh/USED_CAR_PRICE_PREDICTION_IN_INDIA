@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 from sklearn.pipeline import Pipeline
@@ -47,34 +46,43 @@ model = train_model(X, y)
 
 
 # Custom CSS for a modern UI
-st.markdown(
-    """
+st.markdown("""
     <style>
         .stApp {
-            background: #f7f7f9;
-        }
-        h1, h2, h3 {
+            background-color: #f9f9f9;
             font-family: 'Arial', sans-serif;
         }
-        .section-title {
+        .stButton>button {
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .section-header {
             color: #007bff;
             font-size: 20px;
-            font-weight: bold;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
+            margin-bottom: 10px;
+            margin-top: 20px;
         }
-        .predict-button button {
-            background-color: #28a745;
-            color: white;
-            font-size: 16px;
-            padding: 10px 20px;
+        .note {
+            background-color: #eaf4ff;
+            border-left: 6px solid #007bff;
+            padding: 10px;
+            margin: 20px 0;
         }
     </style>
-    """,
-    unsafe_allow_html=True,
-)
-
+""", unsafe_allow_html=True)
 # Streamlit App
+st.markdown('<div class="header">🚗 Used Car Price Prediction</div>', unsafe_allow_html=True)
 st.title("🚗 Predict the Price, Drive the Decision. 🏎️")
 st.write("Fill in the details below to get the estimated price of the used 🚗.")
 
