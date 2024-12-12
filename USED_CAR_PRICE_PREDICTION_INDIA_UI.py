@@ -46,8 +46,6 @@ y = data["Price(Lakhs)"]
 # Train the model and cache it
 model = train_model(X, y)
 
-# Streamlit page configuration
-st.set_page_config(page_title="Car Price Prediction", layout="wide")
 
 # Custom CSS for a modern UI
 st.markdown(
